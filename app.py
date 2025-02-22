@@ -148,6 +148,6 @@ async def upload_files(cv: UploadFile = File(...),
     return {
         "candidate_name": result["name"],
         "candidate_email": result["email"],
-        "fitness score": round(score, 2),
+        "fitness score": float(round(score, 2)),
         "candidate_fitness": canditate_fitness(score)
     }
